@@ -1,0 +1,600 @@
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+/* Style du haut de la page */
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 3%;
+}
+
+.logo_booki {
+    width: 100px;
+    margin: 0;
+    padding: 40px 0;
+}
+
+nav.nav_ancre {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+    width: 30%;
+}
+
+nav.nav_ancre li {
+    display: inline-block;
+    width: 100%;
+    border-top: 3px solid transparent;
+    list-style-type: none;
+    text-align: center;
+}
+
+nav.nav_ancre li:hover {
+    border-top: 3px solid #0065FC;
+    color: #0065FC;
+}
+
+nav.nav_ancre a {
+    display: inline-block;
+    padding: 40px 0;
+    text-decoration: none;
+    color: black;
+}
+
+nav.nav_ancre a:hover {
+    color: #0065FC;
+}
+
+/* Style du slogan de la page */
+
+section.form_slogan {
+    margin:0 3%;
+    line-height: 30px;
+}
+
+
+/* Style du formulaire de recherche */
+
+form.form_search {
+    padding: 15px 0 30px 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+button.location_icon {
+    padding: 5px;
+    margin: 0;
+    height: 50px;
+    width: 50px;
+    background-color: #f2f2f2;
+    border: 2px solid #f2f2f2;
+    border-radius: 15px 0 0 15px;
+}
+
+button.location_icon:hover {
+    cursor: pointer;
+}
+
+input.search {
+    margin: 0;
+    padding: 5px;
+    height: 50px;
+    width: 250px;
+    font-weight: 600;
+    border-top: 2px solid #f2f2f2;
+    border-bottom: 2px solid #f2f2f2;
+    border-right: none;
+    border-left: none;
+}
+
+input.search:focus {
+    outline: none;
+    font-weight: normal;
+}
+
+button.btn_search {
+    margin: 0;
+    padding: 5px 15px;
+    height: 50px;
+    background-color: #0065FC;
+    color: #FFF;
+    font-weight: 600;
+    border: 2px solid #0065FC;
+    border-radius: 0 15px 15px 0;
+}
+
+button.btn_search:hover {
+    cursor: pointer;
+}
+
+/* Style de navigation "filtres" */
+
+nav.form_filtre {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    font-weight: 600;
+}
+
+nav.form_filtre p {
+    margin: 10px 30px 10px 0;
+    font-size: 20px;
+}
+
+nav.form_filtre button {
+    box-sizing: border-box;
+    margin: 10px;
+    height: 50px;
+    padding-right: 20px;
+    padding-left: 55px;
+    font-size: 18px;
+    background-color: transparent;
+    border: 2px solid #e2e2e2;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Icon des span de la section filtre */
+
+.icon_dog::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: "\f6d3";
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DEEBFF;
+    color: #0065FC;
+    border-radius: 25px;
+    position: absolute;
+    left: -5px;
+    
+}
+
+.icon_romantic::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: "\f004";
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DEEBFF;
+    color: #0065FC;
+    border-radius: 25px;
+    position: absolute;
+    left: -5px;
+}
+
+.icon_family::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: "\f1ae";
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DEEBFF;
+    color: #0065FC;
+    border-radius: 25px;
+    position: absolute;
+    left: -5px;
+}
+
+.icon_economic::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: "\f53a";
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DEEBFF;
+    color: #0065FC;
+    border-radius: 25px;
+    position: absolute;
+    left: -5px;
+}
+
+/* Style du paragraphe info */
+div.info {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+}
+
+div p {
+    margin: 0 0 0 10px;
+}
+
+.info_icon {
+    margin: 0;
+    height: 26px;
+    width: 26px;
+    border: 1px solid #e2e2e2;
+    border-radius: 13px;
+    color: #0065FC;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.lodging-popular {
+    margin: 0 3%;
+    display: flex;
+    max-height: 650px;
+    height: auto;
+}
+
+/* Style des hébergement */
+
+div.lodging {
+    margin: 0 auto 0 0;
+    padding: 2.5%;
+    width: 66%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+div.lodging h3 {
+    margin: 0 auto 0 0;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+div.form_lodging {
+    padding: 5px;
+    margin: 2.5% auto;
+    width: 30%;
+    height: 36%;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .2) ;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+div.form_lodging:hover {
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+div.form_lodging img {
+    width: 100%;
+    height: 60%;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+}
+
+p.title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+p.price {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+p.price::before {
+    content: 'Nuit à partir de ';
+    font-weight: 500;
+}
+
+p.price::after {
+    content: '€';
+}
+
+p.more a {
+    font-size: 18px;
+    font-weight: 900;
+    text-decoration: none;
+    color: black;
+}
+
+p.more a:hover {
+    color: rgba(0, 0, 0, .5);
+}
+
+/* style des plus populaire */
+
+div.popular {
+    margin: 0 0 0 auto;
+    padding: 3%;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+h3.title_popular {
+    margin: 0 auto 0 0;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 900;
+    display: flex;
+    justify-content: space-between;
+}
+
+span.title_popular-icon {
+    justify-content: flex-end;
+    margin: 0;
+}
+
+span.title_popular-icon a {
+    text-decoration: none;
+    color: black;
+}
+
+span.title_popular-icon a:hover {
+    color: rgba(0, 0, 0, .5);
+}
+
+div.form_popular {
+    padding: 5px;
+    margin: 2.5% auto;
+    width: 100%;
+    height: 25%;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .2) ;
+    border-radius: 20px;
+    display: flex;
+    transition: .3s;
+}
+
+div.form_popular:hover {
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+div.form_popular_img {
+    height: 100%;
+    width: 40%;
+    margin: 0;
+}
+
+div.form_popular_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+}
+
+div.form_popular_text {
+    width: 60%;
+    margin: 4% 0 0 4%;
+    display: flex;
+    flex-direction: column;
+}
+
+div.form_score {
+    display: flex;
+    flex-direction: row;
+}
+
+/* style du score des cards */
+
+.score_lightness {
+    margin-left: 0;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    color: #0065FC;
+}
+
+.score_darkness {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    opacity: .2;
+    color: black;
+}
+
+/* Style des activités à Marseille */
+
+section.form_activity {
+    margin: 0 3% 20px 3%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+section.form_activity h3 {
+    margin: 25px auto;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+p.title_activity-card {
+    font-size: 18px;
+    font-weight: 600;
+    height: 50px;
+    width: 100%;
+    padding-left: 15px;
+    padding-top: 14px;
+    background-color: #FFF;
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+}
+
+div.form_activity-column1 {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+div.form_activity-column2 {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-right: 0;
+}
+
+div.form_activity-cards1 {
+    width: 23%;
+    margin: 0;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .1) ;
+    overflow: hidden;
+    position: relative;
+}
+
+div.form_activity-cards1 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 100% right;
+}
+
+div.form_activity-cards2 {
+    width: 100%;
+    height: 60%;
+    margin: 0 0 auto 0;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .1) ;
+    overflow: hidden;
+    position: relative;
+}
+
+div.form_activity-cards2 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 100% right;
+}
+
+div.form_activity-cards3 {
+    width: 100%;
+    height: 30%;
+    margin: auto 0 0 0;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .1) ;
+    overflow: hidden;
+    position: relative;
+}
+
+div.form_activity-cards3 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 100% right;
+}
+
+div.form_activity-cards4 {
+    width: 100%;
+    height: 45%;
+    margin: 0 0 auto 0;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .1) ;
+    overflow: hidden;
+    position: relative;
+}
+
+div.form_activity-cards4 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 100% right;
+}
+
+div.form_activity-cards5 {
+    width: 100%;
+    height: 45%;
+    margin: auto 0 0 0;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .1) ;
+    overflow: hidden;
+    position: relative;
+}
+
+div.form_activity-cards5 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 100% right;
+}
+
+/* Style du pied de page */
+
+footer {
+    margin-top: 10px;
+    padding: 4% 3%;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+div.form_footer {
+    margin: 0;
+    width: 33%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+}
+
+footer ul {
+    padding: 0;
+}
+
+footer ul li {
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+footer li a {
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+}
+
+footer li a:hover {
+    color: rgba(0, 0, 0, .5);
+}
