@@ -12,6 +12,11 @@ body {
     overflow-y: scroll;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 /* Style du haut de la page */
 header {
     display: flex;
@@ -26,34 +31,35 @@ header {
 }
 
 nav.nav_ancre {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
     margin: 0;
     width: 30%;
 }
 
-nav.nav_ancre li {
-    display: inline-block;
-    width: 100%;
-    border-top: 3px solid transparent;
-    list-style-type: none;
-    text-align: center;
+ul.ul_ancre {
+    padding: 0;
+    display: flex;
 }
 
-nav.nav_ancre li:hover {
+ul.ul_ancre li {
+    width: 100%;
+    border-top: 3px solid transparent;
+    text-align: center;
+    list-style-type: none;
+}
+
+ul.ul_ancre li:hover {
     border-top: 3px solid #0065FC;
     color: #0065FC;
 }
 
-nav.nav_ancre a {
+ul.ul_ancre a {
     display: inline-block;
     padding: 40px 0;
     text-decoration: none;
     color: black;
 }
 
-nav.nav_ancre a:hover {
+ul.ul_ancre a:hover {
     color: #0065FC;
 }
 
@@ -70,12 +76,9 @@ section.form_slogan {
 form.form_search {
     padding: 15px 0 30px 0;
     display: flex;
-    justify-content: flex-start;
 }
 
 button.location_icon {
-    padding: 5px;
-    margin: 0;
     height: 50px;
     width: 50px;
     background-color: #f2f2f2;
@@ -88,7 +91,6 @@ button.location_icon:hover {
 }
 
 input.search {
-    margin: 0;
     padding: 5px;
     height: 50px;
     width: 250px;
@@ -105,7 +107,6 @@ input.search:focus {
 }
 
 button.btn_search {
-    margin: 0;
     padding: 5px 15px;
     height: 50px;
     background-color: #0065FC;
@@ -119,11 +120,25 @@ button.btn_search:hover {
     cursor: pointer;
 }
 
+button.btn_search-mobile {
+    padding: 5px 15px;
+    height: 50px;
+    background-color: #0065FC;
+    color: #FFF;
+    font-weight: 600;
+    border: 2px solid #0065FC;
+    border-radius: 0 15px 15px 0;
+    display: none;
+}
+
+button.btn_search-mobile:hover {
+    cursor: pointer;
+}
+
 /* Style de navigation "filtres" */
 
 nav.form_filtre {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     height: 50px;
     font-weight: 600;
@@ -135,7 +150,6 @@ nav.form_filtre p {
 }
 
 nav.form_filtre button {
-    box-sizing: border-box;
     margin: 10px;
     height: 50px;
     padding-right: 20px;
@@ -256,7 +270,6 @@ section.lodging-popular {
     margin: 0 3%;
     display: flex;
     max-height: 650px;
-    height: auto;
 }
 
 /* Style des hébergement */
@@ -272,17 +285,14 @@ div.lodging {
 }
 
 div.lodging h3 {
-    margin: 0 auto 0 0;
     width: 100%;
     font-size: 24px;
-    font-weight: 900;
 }
 
 div.form_lodging {
     padding: 5px;
-    margin: 2.5% auto;
     width: 30%;
-    height: 36%;
+    height: 38%;
     background-color: #fff;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .2) ;
     border-radius: 20px;
@@ -302,13 +312,13 @@ div.form_lodging img {
 }
 
 p.title {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
 }
 
 p.price {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-size: 14px;
     font-weight: 600;
 }
@@ -349,7 +359,6 @@ h3.title_popular {
     margin: 0 auto 0 0;
     width: 100%;
     font-size: 24px;
-    font-weight: 900;
     display: flex;
     justify-content: space-between;
 }
@@ -380,15 +389,17 @@ div.form_popular {
     transition: .3s;
 }
 
+a.form_popular_link {
+    display: flex;
+}
+
 div.form_popular:hover {
     transform: scale(1.1);
     transition: .3s;
 }
 
 div.form_popular_img {
-    height: 100%;
     width: 40%;
-    margin: 0;
 }
 
 div.form_popular_img img {
@@ -401,11 +412,14 @@ div.form_popular_img img {
 div.form_popular_text {
     width: 60%;
     margin: 4% 0 0 4%;
-    display: flex;
-    flex-direction: column;
 }
 
-div.form_score {
+div.form_score-lodging {
+    display: flex;
+    flex-direction: row;
+}
+
+div.form_score-popular {
     display: flex;
     flex-direction: row;
 }
@@ -413,16 +427,11 @@ div.form_score {
 /* style du score des cards */
 
 .score_lightness {
-    margin-left: 0;
-    width: 20px;
-    height: 20px;
     font-size: 12px;
     color: #0065FC;
 }
 
 .score_darkness {
-    width: 20px;
-    height: 20px;
     font-size: 12px;
     opacity: .2;
     color: black;
@@ -433,16 +442,13 @@ div.form_score {
 section.form_activity {
     margin: 0 3% 20px 3%;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    height: auto;
 }
 
 section.form_activity h3 {
     margin: 25px auto;
     width: 100%;
     font-size: 24px;
-    font-weight: 900;
 }
 
 p.title_activity-card {
@@ -462,29 +468,32 @@ div.form_activity-column1 {
     display: flex;
     flex-direction: column;
     width: 20%;
+    height: 500px;
 }
 
 div.form_activity-column2 {
     display: flex;
     flex-direction: column;
     width: 20%;
+    height: 500px;
     margin-right: 0;
 }
 
 div.form_activity-cards1 {
     width: 23%;
+    height: 500px;
     margin: 0;
     border-radius: 20px;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .1) ;
     overflow: hidden;
     position: relative;
+    transition: .3s;
 }
 
 div.form_activity-cards1 img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: 100% right;
 }
 
 div.form_activity-cards2 {
@@ -495,13 +504,13 @@ div.form_activity-cards2 {
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .1) ;
     overflow: hidden;
     position: relative;
+    transition: .3s;
 }
 
 div.form_activity-cards2 img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: 100% right;
 }
 
 div.form_activity-cards3 {
@@ -512,13 +521,13 @@ div.form_activity-cards3 {
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .1) ;
     overflow: hidden;
     position: relative;
+    transition: .3s;
 }
 
 div.form_activity-cards3 img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: 100% right;
 }
 
 div.form_activity-cards4 {
@@ -529,13 +538,13 @@ div.form_activity-cards4 {
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .1) ;
     overflow: hidden;
     position: relative;
+    transition: .3s;
 }
 
 div.form_activity-cards4 img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: 100% right;
 }
 
 div.form_activity-cards5 {
@@ -546,28 +555,29 @@ div.form_activity-cards5 {
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .1) ;
     overflow: hidden;
     position: relative;
+    transition: .3s;
 }
 
 div.form_activity-cards5 img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: 100% right;
+}
+
+div.form_activity-cards1:hover, div.form_activity-cards2:hover, div.form_activity-cards3:hover, div.form_activity-cards4:hover, div.form_activity-cards5:hover {
+    transform: scale(1.1);
+    transition: .3s;
 }
 
 /* Style du pied de page */
 
 footer {
-    margin-top: 10px;
     padding: 4% 3%;
     background-color: #f2f2f2;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
 }
 
 div.form_footer {
-    margin: 0;
     width: 33%;
 }
 
@@ -597,4 +607,307 @@ footer li a {
 
 footer li a:hover {
     color: rgba(0, 0, 0, .5);
+}
+
+@media (max-width: 1230px){
+    p.title_activity-card {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1102px){
+    p.title_activity-card {
+        font-size: 14px;
+    }
+}
+/* Style responsive pour tablette */
+
+@media (min-width: 768px) and (max-width: 992px){
+
+    /* filtre tablette */
+
+    nav.form_filtre p {
+        margin: 10px 10px 10px 0;
+    }
+
+    nav.form_filtre button {
+        margin: 5px;
+        height: 40px;
+        padding-right: 15px;
+        padding-left: 40px;
+        font-size: 16px;
+        border-radius: 20px;
+    }
+
+    .icon_economic::before, .icon_family::before, .icon_romantic::before, .icon_dog::before {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        border-radius: 20px;
+    }
+
+    /* hébergement tablette */
+
+    div.lodging {
+        padding: 1%;
+    }
+
+    div.form_lodging {
+        width: 32%;
+        text-align: center;
+    }
+
+    div.popular {
+        padding: 1%;
+    }
+
+    p.price {
+        margin: 0;
+    }
+
+    div p {
+        margin: 0;
+    }
+
+    /* activity tablette */
+
+    p.title_activity-card {
+        font-size: 14px;
+        height: 35px;
+        padding-left: 10px;
+        padding-top: 0;
+        display: flex;
+        align-items: center;
+        left: 0;
+    }
+
+    div.form_activity-cards1, div.form_activity-column1, div.form_activity-column2 {
+        height: 350px;
+    }
+}
+
+/* Style responsive pour mobile */
+
+@media (max-width: 768px){
+
+    /* Style header pour mobile */
+
+    header {
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo_booki {
+        width: 150px;
+    }
+
+    nav.nav_ancre {
+        width: 100%;
+    }
+    
+    ul.ul_ancre li {
+        border-top: none;
+        border-bottom: 3px solid #f2f2f2;
+    }
+
+    ul.ul_ancre li:hover {
+        border-top: none;
+        border-bottom: 3px solid #0065FC;
+    }
+
+    ul.ul_ancre a {
+        width: 100%;
+        padding: 15px 0;
+        font-size: 20px;
+    }
+
+    /* Style slogan pour mobile */
+
+    section.form_slogan {
+        margin: 0 5%;
+    }
+
+    section.form_slogan h2 {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    section.form_slogan p {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    /* Style search pour mobile */
+
+    form.form_search {
+        position: relative;
+        padding: 20px 0;
+    }
+
+    button.btn_search {
+        display: none;
+    }
+
+    button.btn_search-mobile {
+        display: flex;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 20px;
+        font-size: 18px;
+        position: absolute;
+        right: 0;
+    }
+
+    button.location_icon {
+        display: flex;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 20px 0 0 20px;
+        font-size: 22px;
+    }
+
+    input.search {
+        height: 60px;
+        font-size: 18px;
+        width: 100%;
+        border-radius: 0 20px 20px 0;
+    }
+
+    /* style filtres pour mobile */
+
+    nav.form_filtre {
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+
+    nav.form_filtre p {
+        width: 100%;
+    }
+
+    nav.form_filtre button {
+        margin: 5px 10px 5px 0;
+        font-weight: 900;
+    }
+
+    /* style info pour mobile */
+
+    .info_icon {
+        width: 45px;
+        height: 30px;
+        border-radius: 20px;
+    }
+
+    div.info {
+        margin: 20px 0;
+    }
+
+    /* style popular pour mobile */
+    
+    section.lodging-popular {
+        flex-direction: column;
+        margin: 0;
+        max-height: fit-content;
+    }
+
+    div.popular {
+        order: 1;
+        width: 100%;
+        border-radius: 0;
+        padding: 10% 5%;
+    }
+
+    h3.title_popular {
+        margin-bottom: 15px;
+    }
+
+    div.form_popular {
+        height: 150px;
+    }
+
+    a.form_popular_link {
+        margin: 0;
+        width: 100%;
+    }
+
+    p.title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    p.price {
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+
+    /* style lodging pour mobile */
+
+    div.lodging {
+        order: 2;
+        padding: 10% 5%;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    div.lodging h3 {
+        margin-bottom: 15px;
+    }
+
+    div.form_lodging {
+        height: 200px;
+        width: 330px;
+        margin: 10px 0;
+        position: relative;
+    }
+
+    p.more {
+        margin-top: 25px;
+        margin-left: 0;
+    }
+
+    p.more a {
+        font-size: 20px;
+    }
+
+    p.form_score-lodging {
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+    }
+
+    /* style activity pour mobile */
+
+    section.form_activity {
+        flex-direction: column;
+        margin: 0 5% 20px 5%;
+    }
+
+    div.form_activity-cards1, div.form_activity-cards2, div.form_activity-cards3, div.form_activity-cards4, div.form_activity-cards5 {
+        width: 100%;
+        height: 200px;
+        margin: 10px 0;
+    }
+
+    div.form_activity-column1, div.form_activity-column2 {
+        width: 100%;
+        height: fit-content;
+    }
+
+    p.title_activity-card {
+        font-size: 18px;
+    }
+
+    /* style footer pour mobile */
+
+    footer {
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    div.form_footer {
+        width: 100%;
+        margin: 15px 0;
+    }
 }

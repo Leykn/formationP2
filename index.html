@@ -28,8 +28,10 @@
     <header>
         <img class="logo_booki" src="images/logo/Booki.png" alt="">
         <nav class="nav_ancre">
+            <ul class="ul_ancre">
                 <li><a href="#lodging">Hébergements</a></li>
                 <li><a href="#activity">Activités</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -42,6 +44,7 @@
             <button class="location_icon" type="button"><i class="fa-solid fa-location-dot"></i></button>
             <input class="search" type="text" value="Marseille, France">
             <button class="btn_search" type="button">Rechercher</button>
+            <button class="btn_search-mobile" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
         <nav class="form_filtre">
             <p>Filtres</p>
@@ -62,10 +65,11 @@
         <div class="lodging">
             <h3 id="lodging">Hébergements à Marseille</h3>
             <div class="form_lodging">
+                <a href="#">
                 <img src="images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Deux lits superposés, mur blanc, rideau vert..">
                 <p class="title">Auberge la Cannebière</p>
                 <p class="price">25</p>
-                <p class="form_score">
+                <p class="form_score-lodging">
                     <span class="score_lightness">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -76,12 +80,14 @@
                         <i class="fa-solid fa-star"></i>
                     </span>
                 </p>
+                </a>
             </div>
             <div class="form_lodging">
+                <a href="#">
                 <img src="images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Deux lits une personne, mur gris, rideau blanc..">
                 <p class="title">Hôtel du port</p>
                 <p class="price">52</p>
-                <p class="form_score">
+                <p class="form_score-lodging">
                     <span class="score_lightness">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -90,12 +96,14 @@
                         <i class="fa-solid fa-star"></i>
                     </span>
                 </p>
+                </a>
             </div>
             <div class="form_lodging">
+                <a href="#">
                 <img src="images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Un lit double">
                 <p class="title">Hôtel Les mouettes</p>
                 <p class="price">76</p>
-                <p class="form_score">
+                <p class="form_score-lodging">
                     <span class="score_lightness">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -106,12 +114,14 @@
                         <i class="fa-solid fa-star"></i>
                     </span>
                 </p>
+                </a>
             </div>
             <div class="form_lodging">
+                <a href="#">
                 <img src="images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Un lit double et un canapé couleur océan">
                 <p class="title">Hôtel de la mer</p>
                 <p class="price">46</p>
-                <p class="form_score">
+                <p class="form_score-lodging">
                     <span class="score_lightness">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -122,12 +132,14 @@
                         <i class="fa-solid fa-star"></i>
                     </span>
                 </p>
+                </a>
             </div>
             <div class="form_lodging">
+                <a href="#">
                 <img src="images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="deux lits superposés style rustique">
                 <p class="title">Auberge Le panier</p>
                 <p class="price">23</p>
-                <p class="form_score">
+                <p class="form_score-lodging">
                     <span class="score_lightness">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -138,12 +150,14 @@
                         <i class="fa-solid fa-star"></i>
                     </span>
                 </p>
+                </a>
             </div>
             <div class="form_lodging">
+                <a href="#">
                 <img src="images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Deux lit une personne, mur blanc, rideau noir">
                 <p class="title">Hôtel chez Amina</p>
                 <p class="price">96</p>
-                <p class="form_score">
+                <p class="form_score-lodging">
                     <span class="score_lightness">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -152,20 +166,22 @@
                         <i class="fa-solid fa-star"></i>
                     </span>
                 </p>
+                </a>
             </div>
-            <p class="more"><a href="">Afficher plus</a></p>
+            <p class="more"><a href="#">Afficher plus</a></p>
         </div>
         <!-- Popular -->
         <div class="popular">
-            <h3 class="title_popular">Les plus populaires <span class="title_popular-icon"><a href=""><i class="fa-solid fa-chart-line"></i></a></span></h3>
+            <h3 class="title_popular">Les plus populaires <span class="title_popular-icon"><a href="#"><i class="fa-solid fa-chart-line"></i></a></span></h3>
             <div class="form_popular">
+                <a class="form_popular_link" href="#">
                 <div class="form_popular_img">
                     <img src="images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Un lit double, mur vert, deux miroirs ( un au dessus de la tête de lit et une au plafond">
                 </div>
                 <div class="form_popular_text">
                     <p class="title">Hôtel Le soleil du matin</p>
                     <p class="price">128</p>
-                    <p class="form_score">
+                    <p class="form_score-popular">
                         <span class="score_lightness">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -175,15 +191,17 @@
                         </span>
                     </p>
                 </div>
+                </a>
             </div>
             <div class="form_popular">
+                <a class="form_popular_link" href="#">
                 <div class="form_popular_img">
                     <img src="images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="un lit double, sol marbré, style modern">
                 </div>
                 <div class="form_popular_text">
                     <p class="title">Au coeur de l'eau Chambre d'hôtes</p>
                     <p class="price">71</p>
-                    <p class="form_score">
+                    <p class="form_score-popular">
                         <span class="score_lightness">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -195,15 +213,17 @@
                         </span>
                     </p>
                 </div>
+                </a>
             </div>
             <div class="form_popular">
+                <a class="form_popular_link" href="#">
                 <div class="form_popular_img">
                     <img src="images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Un lit double, mur blanc">
                 </div>
                 <div class="form_popular_text">
                     <p class="title">Hôtel Tout bleu et Blanc</p>
                     <p class="price">68</p>
-                    <p class="form_score">
+                    <p class="form_score-popular">
                         <span class="score_lightness">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -215,6 +235,7 @@
                         </span>
                     </p>
                 </div>
+                </a>
             </div>
         </div>
     </section>
@@ -222,31 +243,43 @@
     <section class="form_activity">
         <h3 id="activity">Activités à Marseille</h3>
         <div class="form_activity-cards1">
+            <a href="#">
             <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Port remplie de bateau">
             <p class="title_activity-card">Vieux Port</p>
+            </a>
         </div>
         <div class="form_activity-column1">
             <div class="form_activity-cards2">
+                <a href="#">
                 <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues">
                 <p class="title_activity-card">Fort de Pomègues</p>
+                </a>
             </div>
             <div class="form_activity-cards3">
+                <a href="#">
                 <img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Îles de Frioul">
                 <p class="title_activity-card">Îles de Frioul</p>
+                </a>
             </div>
         </div>
         <div class="form_activity-cards1">
+            <a href="#">
             <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc national des Calanques">
             <p class="title_activity-card">Parc national des Calanques</p>
+            </a>
         </div>
         <div class="form_activity-column2">
             <div class="form_activity-cards4">
+                <a href="#">
                 <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre Dame de la Garde">
                 <p class="title_activity-card">Notre-Dame-de-la-Garde</p>
+                </a>
             </div>
             <div class="form_activity-cards5">
+                <a href="#">
                 <img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp">
                 <p class="title_activity-card">Parc Longchamp</p>
+                </a>
             </div>
         </div>
     </section>
@@ -256,23 +289,23 @@
         <div class="form_footer">
             <p>A propos</p>
             <ul>
-                <li><a href="">Fonctionnement du site</a></li>
-                <li><a href="">Conditions générals de vente</a></li>
-                <li><a href="">Données et confidentialité</a></li>
+                <li><a href="#">Fonctionnement du site</a></li>
+                <li><a href="#">Conditions générals de vente</a></li>
+                <li><a href="#">Données et confidentialité</a></li>
             </ul>
         </div>
         <div class="form_footer">
         <p>Nos hébergements</p>
         <ul>
-            <li><a href="">Charte qualité</a></li>
-            <li><a href="">Soumettre votre hôtel</a></li>
+            <li><a href="#">Charte qualité</a></li>
+            <li><a href="#">Soumettre votre hôtel</a></li>
         </ul>
         </div>
         <div class="form_footer">
         <p>Assistance</p>
         <ul>
-            <li><a href="">Centre d'aide</a></li>
-            <li><a href="">Nous contacter</a></li>
+            <li><a href="#">Centre d'aide</a></li>
+            <li><a href="#">Nous contacter</a></li>
         </ul>
         </div>
     </footer>
