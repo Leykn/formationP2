@@ -857,7 +857,7 @@ footer li a:hover {
 
     div.form_lodging {
         height: 200px;
-        width: 330px;
+        width: 100%;
         margin: 10px 0;
         position: relative;
     }
