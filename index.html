@@ -26,9 +26,10 @@
     <!-- Haut de page -->
     <!-- Header -->
     <header>
-        <img class="logo_booki" src="images/logo/Booki.png" alt="">
-        <nav class="nav_ancre">
-            <ul class="ul_ancre">
+        <img class="logo_booki" src="images/logo/Booki.png" alt="Logo Booki">
+        <img class="logo_booki-mobile" src="images/logo/Booki@3x.png" alt="Logo Booki">
+        <nav class="nav_anchor">
+            <ul class="ul_anchor">
                 <li><a href="#lodging">Hébergements</a></li>
                 <li><a href="#activity">Activités</a></li>
             </ul>
@@ -37,7 +38,7 @@
 
     <!-- Slogan, formulaire de recherche, filtre -->
     <!-- Tagline, search form, filter -->
-    <section class="form_slogan">
+    <section class="form_tagline">
         <h2>Trouver votre hébergement pour des vacance de rêve</h2>
         <p>En plein centre ville ou en pleine nature</p>
         <form class="form_search" action="src/search.php" method="post">
@@ -46,13 +47,33 @@
             <button class="btn_search" type="button">Rechercher</button>
             <button class="btn_search-mobile" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
-        <nav class="form_filtre">
-            <p>Filtres</p>
-            <button class="icon_economic">Économique</button>
-            <button class="icon_family">Familial</button>
-            <button class="icon_romantic">Romantique</button>
-            <button class="icon_dog">Animaux autorisés</button>
-        </nav>
+        <div class="form_filter">
+            <p>Flitres</p>
+            <div class="div_economic">
+                <span class="btn_filter">
+                    <input class="icon_economic" type="checkbox" name="" id="click1">
+                    <label for="click1">Économique</label>
+                </span>
+            </div>
+            <div class="div_family">
+                <span class="btn_filter">
+                    <input class="icon_family" type="checkbox" name="" id="click2">
+                    <label for="click2">Familial</label>
+                </span>
+            </div>
+            <div class="div_romantic">
+                <span class="btn_filter">
+                    <input class="icon_romantic" type="checkbox" name="" id="click3">
+                    <label for="click3">Romantique</label>
+                </span>
+            </div>
+            <div class="div_dog">
+                <span class="btn_filter">
+                    <input class="icon_dog" type="checkbox" name="" id="click4">
+                    <label for="click4">Animaux autorisés</label>
+                </span>
+            </div>
+        </div>
         <div class="info">
             <i class="fa-solid fa-info info_icon"></i>
             <p>Plus de 500 logements sont disponibles dans cette ville</p>
@@ -66,7 +87,7 @@
             <h3 id="lodging">Hébergements à Marseille</h3>
             <div class="form_lodging">
                 <a href="#">
-                <img src="images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Deux lits superposés, mur blanc, rideau vert..">
+                <img src="images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Chambre lits superposés, Auberge la Cannebière">
                 <p class="title">Auberge la Cannebière</p>
                 <p class="price">25</p>
                 <p class="form_score-lodging">
@@ -84,7 +105,7 @@
             </div>
             <div class="form_lodging">
                 <a href="#">
-                <img src="images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Deux lits une personne, mur gris, rideau blanc..">
+                <img src="images/hebergements/2_large/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Chambre deux lits simple, Hôtel du port">
                 <p class="title">Hôtel du port</p>
                 <p class="price">52</p>
                 <p class="form_score-lodging">
@@ -100,7 +121,7 @@
             </div>
             <div class="form_lodging">
                 <a href="#">
-                <img src="images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Un lit double">
+                <img src="images/hebergements/2_large/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Chambre lit double, Hôtel Les mouettes">
                 <p class="title">Hôtel Les mouettes</p>
                 <p class="price">76</p>
                 <p class="form_score-lodging">
@@ -118,7 +139,7 @@
             </div>
             <div class="form_lodging">
                 <a href="#">
-                <img src="images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Un lit double et un canapé couleur océan">
+                <img src="images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Chambre lit double, Hôtel de la mer">
                 <p class="title">Hôtel de la mer</p>
                 <p class="price">46</p>
                 <p class="form_score-lodging">
@@ -136,7 +157,7 @@
             </div>
             <div class="form_lodging">
                 <a href="#">
-                <img src="images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="deux lits superposés style rustique">
+                <img src="images/hebergements/2_large/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Chambre deux lits superposés, Auberge Le panier">
                 <p class="title">Auberge Le panier</p>
                 <p class="price">23</p>
                 <p class="form_score-lodging">
@@ -154,7 +175,7 @@
             </div>
             <div class="form_lodging">
                 <a href="#">
-                <img src="images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Deux lit une personne, mur blanc, rideau noir">
+                <img src="images/hebergements/2_large/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Chambre deux lit simple, Hôtel chez Amina">
                 <p class="title">Hôtel chez Amina</p>
                 <p class="price">96</p>
                 <p class="form_score-lodging">
@@ -176,7 +197,7 @@
             <div class="form_popular">
                 <a class="form_popular_link" href="#">
                 <div class="form_popular_img">
-                    <img src="images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Un lit double, mur vert, deux miroirs ( un au dessus de la tête de lit et une au plafond">
+                    <img src="images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Chambre lit double, Hôtel Le soleil du matin">
                 </div>
                 <div class="form_popular_text">
                     <p class="title">Hôtel Le soleil du matin</p>
@@ -196,7 +217,7 @@
             <div class="form_popular">
                 <a class="form_popular_link" href="#">
                 <div class="form_popular_img">
-                    <img src="images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="un lit double, sol marbré, style modern">
+                    <img src="images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Chambre lit double, Au coeur de l'eau Chambre d'hôtes">
                 </div>
                 <div class="form_popular_text">
                     <p class="title">Au coeur de l'eau Chambre d'hôtes</p>
@@ -218,7 +239,7 @@
             <div class="form_popular">
                 <a class="form_popular_link" href="#">
                 <div class="form_popular_img">
-                    <img src="images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Un lit double, mur blanc">
+                    <img src="images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Chambre lit double, Hôtel Tout bleu et Blanc">
                 </div>
                 <div class="form_popular_text">
                     <p class="title">Hôtel Tout bleu et Blanc</p>
@@ -244,7 +265,7 @@
         <h3 id="activity">Activités à Marseille</h3>
         <div class="form_activity-cards1">
             <a href="#">
-            <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Port remplie de bateau">
+            <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port">
             <p class="title_activity-card">Vieux Port</p>
             </a>
         </div>

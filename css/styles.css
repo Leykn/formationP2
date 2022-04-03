@@ -18,6 +18,7 @@ a {
 }
 
 /* Style du haut de la page */
+/* Header Style */
 header {
     display: flex;
     justify-content: space-between;
@@ -30,48 +31,54 @@ header {
     padding: 40px 0;
 }
 
-nav.nav_ancre {
+.logo_booki-mobile {
+    display: none;
+}
+
+nav.nav_anchor {
     margin: 0;
     width: 30%;
 }
 
-ul.ul_ancre {
+ul.ul_anchor {
     padding: 0;
     display: flex;
 }
 
-ul.ul_ancre li {
+ul.ul_anchor li {
     width: 100%;
     border-top: 3px solid transparent;
     text-align: center;
     list-style-type: none;
 }
 
-ul.ul_ancre li:hover {
+ul.ul_anchor li:hover {
     border-top: 3px solid #0065FC;
     color: #0065FC;
 }
 
-ul.ul_ancre a {
+ul.ul_anchor a {
     display: inline-block;
     padding: 40px 0;
     text-decoration: none;
     color: black;
 }
 
-ul.ul_ancre a:hover {
+ul.ul_anchor a:hover {
     color: #0065FC;
 }
 
 /* Style du slogan de la page */
+/* Page Tagline Style */
 
-section.form_slogan {
+section.form_tagline {
     margin:0 3%;
     line-height: 30px;
 }
 
 
 /* Style du formulaire de recherche */
+/* Search form style */
 
 form.form_search {
     padding: 15px 0 30px 0;
@@ -101,9 +108,15 @@ input.search {
     border-left: none;
 }
 
+input.search:hover {
+    cursor: text;
+}
+
 input.search:focus {
     outline: none;
     font-weight: normal;
+    background-color: #f2f2f2;
+    box-shadow: inset 8px 8px 20px rgba(0, 0, 0, .2);
 }
 
 button.btn_search {
@@ -135,35 +148,93 @@ button.btn_search-mobile:hover {
     cursor: pointer;
 }
 
-/* Style de navigation "filtres" */
+/* Style de la liste des filtres */
+/* Filter List Style */
 
-nav.form_filtre {
+div.form_filter {
     display: flex;
     align-items: center;
     height: 50px;
     font-weight: 600;
 }
 
-nav.form_filtre p {
+div.form_filter p {
     margin: 10px 30px 10px 0;
     font-size: 20px;
 }
 
-nav.form_filtre button {
-    margin: 10px;
-    height: 50px;
-    padding-right: 20px;
-    padding-left: 55px;
-    font-size: 18px;
-    background-color: transparent;
-    border: 2px solid #e2e2e2;
-    border-radius: 25px;
+span.btn_filter {
     display: flex;
     align-items: center;
-    position: relative;
+    height: 50px;
+    max-width: 240px;
+    border-radius: 30px;
 }
 
-/* Icon des span de la section filtre */
+label {
+    display: flex;
+    align-items: center;
+    margin: 5px 10px 5px 60px;
+    height: 100%;
+    z-index: 1;
+    transition: .5s;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+input:hover {
+    cursor: pointer;
+    background-color: #f2f2f2;
+    box-shadow: inset 8px 8px 20px rgba(0, 0, 0, .2);
+}
+
+input:checked + label {
+    color: #000;
+    margin: 5px 40px 5px 20px;
+}
+
+input[type="checkbox"] {
+    height: 100%;
+    margin: 0 auto;
+    appearance: none;
+    border: 2px solid #f2f2f2;
+    border-radius: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+
+input:checked[type="checkbox"]{
+    background-color: #f2f2f2;
+    box-shadow: inset 8px 8px 20px rgba(0, 0, 0, .2);
+}
+
+.icon_economic, .div_economic {
+    width: 190px;
+}
+
+.icon_family, .div_family {
+    width: 150px;
+}
+
+.icon_romantic, .div_romantic {
+    width: 190px;
+}
+
+.icon_dog, .div_dog {
+    width: 240px;
+}
+
+.div_economic, .div_family, .div_romantic, .div_dog {
+    position: relative;
+    margin: 0 20px;
+}
+
+/* Icon de la liste des filtres */
+/* Filter list icon */
 
 .icon_dog::before {
     display: inline-block;
@@ -181,8 +252,10 @@ nav.form_filtre button {
     color: #0065FC;
     border-radius: 25px;
     position: absolute;
-    left: -5px;
-    
+    top: -2px;
+    left: 0;
+    z-index: 2;
+    transition: .5s;
 }
 
 .icon_romantic::before {
@@ -201,7 +274,10 @@ nav.form_filtre button {
     color: #0065FC;
     border-radius: 25px;
     position: absolute;
-    left: -5px;
+    top: -2px;
+    left: 0;
+    z-index: 2;
+    transition: .5s;
 }
 
 .icon_family::before {
@@ -220,7 +296,10 @@ nav.form_filtre button {
     color: #0065FC;
     border-radius: 25px;
     position: absolute;
-    left: -5px;
+    top: -2px;
+    left: 0;
+    z-index: 2;
+    transition: .5s;
 }
 
 .icon_economic::before {
@@ -239,10 +318,30 @@ nav.form_filtre button {
     color: #0065FC;
     border-radius: 25px;
     position: absolute;
-    left: -5px;
+    top: -2px;
+    left: 0;
+    z-index: 2;
+    transition: .5s;
+}
+
+.icon_dog:checked::before, .icon_economic:checked::before, .icon_romantic:checked::before, .icon_family:checked::before {
+    background-color: #0065FC;
+    color: #DEEBFF;
+    left: 80%;
+    z-index: 2;
+    transition: .5s;
+}
+
+.icon_dog:hover::before, .icon_economic:hover::before, .icon_romantic:hover::before, .icon_family:hover::before {
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, .2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    transform: scale(1.1);
+    transition: .5s;
 }
 
 /* Style du paragraphe info */
+/* Info paragraph style */
+
 div.info {
     margin: 30px 0;
     display: flex;
@@ -272,7 +371,8 @@ section.lodging-popular {
     max-height: 650px;
 }
 
-/* Style des hébergement */
+/* Style des hébergements */
+/* Lodging Style */
 
 div.lodging {
     margin: 0 auto 0 0;
@@ -343,7 +443,8 @@ p.more a:hover {
     color: rgba(0, 0, 0, .5);
 }
 
-/* style des plus populaire */
+/* style des plus populaires */
+/* Popular Style */
 
 div.popular {
     margin: 0 0 0 auto;
@@ -424,7 +525,8 @@ div.form_score-popular {
     flex-direction: row;
 }
 
-/* style du score des cards */
+/* Style du score des cartes */
+/* Card Score Style */
 
 .score_lightness {
     font-size: 12px;
@@ -438,6 +540,7 @@ div.form_score-popular {
 }
 
 /* Style des activités à Marseille */
+/* Activity Style */
 
 section.form_activity {
     margin: 0 3% 20px 3%;
@@ -570,6 +673,7 @@ div.form_activity-cards1:hover, div.form_activity-cards2:hover, div.form_activit
 }
 
 /* Style du pied de page */
+/* Footer Style */
 
 footer {
     padding: 4% 3%;
@@ -609,28 +713,33 @@ footer li a:hover {
     color: rgba(0, 0, 0, .5);
 }
 
-@media (max-width: 1230px){
+@media screen and (max-width: 1230px){
     p.title_activity-card {
         font-size: 16px;
     }
 }
 
-@media (max-width: 1102px){
+@media screen and (max-width: 1102px){
     p.title_activity-card {
         font-size: 14px;
     }
 }
 /* Style responsive pour tablette */
+/* Responsive style for tablet */
 
-@media (min-width: 768px) and (max-width: 992px){
+@media screen and (min-width: 768px) and (max-width: 992px){
 
-    /* filtre tablette */
+    /* Filter Tablet */
 
-    nav.form_filtre p {
-        margin: 10px 10px 10px 0;
+    div.form_filter p {
+        margin: 10px 0 10px 0;
     }
 
-    nav.form_filtre button {
+    label {
+        margin: 5px 10px 5px 50px;
+    }
+
+    input[type="checkbox"] {
         margin: 5px;
         height: 40px;
         padding-right: 15px;
@@ -646,7 +755,19 @@ footer li a:hover {
         border-radius: 20px;
     }
 
-    /* hébergement tablette */
+    .div_economic, .div_family, .div_romantic, .div_dog {
+        margin: 0 8px;
+    }
+
+    .icon_economic, .div_economic, .icon_romantic, .div_romantic, .icon_family, .div_family, .icon_dog, .div_dog {
+        width: 150px;
+    }
+
+    label {
+        line-height: 20px;
+    }
+
+    /* Lodging Tablet */
 
     div.lodging {
         padding: 1%;
@@ -669,7 +790,7 @@ footer li a:hover {
         margin: 0;
     }
 
-    /* activity tablette */
+    /* Activity Tablet */
 
     p.title_activity-card {
         font-size: 14px;
@@ -687,10 +808,12 @@ footer li a:hover {
 }
 
 /* Style responsive pour mobile */
+/* Mobile-responsive styling */
 
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
 
     /* Style header pour mobile */
+    /* Header style for mobile */
 
     header {
         margin: 0;
@@ -699,46 +822,54 @@ footer li a:hover {
     }
 
     .logo_booki {
-        width: 150px;
+        display: none;
     }
 
-    nav.nav_ancre {
+    .logo_booki-mobile {
+        display: block;
+        width: 30%;
+        margin: 20px 0;
+    }
+
+    nav.nav_anchor {
         width: 100%;
     }
     
-    ul.ul_ancre li {
+    ul.ul_anchor li {
         border-top: none;
         border-bottom: 3px solid #f2f2f2;
     }
 
-    ul.ul_ancre li:hover {
+    ul.ul_anchor li:hover {
         border-top: none;
         border-bottom: 3px solid #0065FC;
     }
 
-    ul.ul_ancre a {
+    ul.ul_anchor a {
         width: 100%;
         padding: 15px 0;
         font-size: 20px;
     }
 
     /* Style slogan pour mobile */
+    /* Tagline Style for Mobile */
 
-    section.form_slogan {
+    section.form_tagline {
         margin: 0 5%;
     }
 
-    section.form_slogan h2 {
+    section.form_tagline h2 {
         font-size: 24px;
         margin-top: 30px;
     }
 
-    section.form_slogan p {
+    section.form_tagline p {
         font-size: 18px;
         margin-top: 10px;
     }
 
-    /* Style search pour mobile */
+    /* Style du formulaire de recherche pour mobile */
+    /* Search Form Style for Mobile */
 
     form.form_search {
         position: relative;
@@ -776,23 +907,25 @@ footer li a:hover {
         border-radius: 0 20px 20px 0;
     }
 
-    /* style filtres pour mobile */
+    /* Style filtres pour mobile */
+    /* Filter Style for Mobile */
 
-    nav.form_filtre {
+    div.form_filter {
         flex-wrap: wrap;
         height: fit-content;
     }
 
-    nav.form_filtre p {
+    div.form_filter p {
         width: 100%;
     }
 
-    nav.form_filtre button {
-        margin: 5px 10px 5px 0;
+    .div_economic, .div_family, .div_romantic, .div_dog {
+        margin: 5px 20px 5px 0;
         font-weight: 900;
     }
 
-    /* style info pour mobile */
+    /* Style info pour mobile */
+    /* Info Style for Mobile */
 
     .info_icon {
         width: 45px;
@@ -804,7 +937,8 @@ footer li a:hover {
         margin: 20px 0;
     }
 
-    /* style popular pour mobile */
+    /* Style des populaires pour mobile */
+    /* Popular Style for Mobile */
     
     section.lodging-popular {
         flex-direction: column;
@@ -842,7 +976,8 @@ footer li a:hover {
         margin-bottom: 35px;
     }
 
-    /* style lodging pour mobile */
+    /* Style des hébergements pour mobile */
+    /* Lodging Style for Mobile */
 
     div.lodging {
         order: 2;
@@ -877,7 +1012,8 @@ footer li a:hover {
         left: 5px;
     }
 
-    /* style activity pour mobile */
+    /* Style des activités pour mobile */
+    /* Activity Style for Mobile */
 
     section.form_activity {
         flex-direction: column;
@@ -899,7 +1035,8 @@ footer li a:hover {
         font-size: 18px;
     }
 
-    /* style footer pour mobile */
+    /* Style du pied de page pour mobile */
+    /* Footer Style for Mobile */
 
     footer {
         flex-direction: column;
