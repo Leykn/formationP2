@@ -17,6 +17,10 @@ a {
     color: black;
 }
 
+a:hover {
+    color: rgba(0, 0, 0, .5);
+}
+
 /* Style du haut de la page */
 /* Header Style */
 header {
@@ -58,13 +62,11 @@ ul.ul_anchor li {
 
 ul.ul_anchor li:hover {
     border-top: 3px solid #0065FC;
-    color: #0065FC;
 }
 
 ul.ul_anchor a {
     display: inline-block;
     padding: 40px 0;
-    color: black;
 }
 
 ul.ul_anchor a:hover {
@@ -186,7 +188,6 @@ input:checked + label {
 
 input[type="checkbox"] {
     height: 100%;
-    margin: 0 auto;
     appearance: none;
     border: 2px solid #f2f2f2;
     border-radius: 25px;
@@ -232,9 +233,6 @@ input:checked[type="checkbox"]{
 /* Filter list icon */
 
 .icon_dog::before {
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
     font: var(--fa-font-solid);
     content: "\f6d3";
     width: 50px;
@@ -254,9 +252,6 @@ input:checked[type="checkbox"]{
 }
 
 .icon_romantic::before {
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
     font: var(--fa-font-solid);
     content: "\f004";
     width: 50px;
@@ -276,9 +271,6 @@ input:checked[type="checkbox"]{
 }
 
 .icon_family::before {
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
     font: var(--fa-font-solid);
     content: "\f1ae";
     width: 50px;
@@ -298,9 +290,6 @@ input:checked[type="checkbox"]{
 }
 
 .icon_economic::before {
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
     font: var(--fa-font-solid);
     content: "\f53a";
     width: 50px;
@@ -334,7 +323,6 @@ input:checked[type="checkbox"]{
 .icon_economic:hover::before,
 .icon_romantic:hover::before,
 .icon_family:hover::before {
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, .2);
     box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
     transform: scale(1.1);
     transition: .5s;
@@ -395,7 +383,7 @@ div.form_lodging {
     width: 30%;
     height: 38%;
     background-color: #fff;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .2) ;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .2) ;
     border-radius: 20px;
     transition: .3s;
 }
@@ -418,8 +406,7 @@ p.title {
 }
 
 p.price {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px 0;
     font-size: 14px;
     font-weight: 600;
 }
@@ -436,11 +423,6 @@ p.price::after {
 p.more a {
     font-size: 18px;
     font-weight: 900;
-    color: black;
-}
-
-p.more a:hover {
-    color: rgba(0, 0, 0, .5);
 }
 
 /* style des plus populaires */
@@ -467,15 +449,6 @@ h3.title_popular {
 span.title_popular-icon {
     justify-content: flex-end;
     margin: 0;
-}
-
-span.title_popular-icon a {
-    text-decoration: none;
-    color: black;
-}
-
-span.title_popular-icon a:hover {
-    color: rgba(0, 0, 0, .5);
 }
 
 div.form_popular {
@@ -559,8 +532,7 @@ p.title_activity-card {
     font-weight: 600;
     height: 50px;
     width: 100%;
-    padding-left: 15px;
-    padding-top: 14px;
+    padding: 14px 0 0 15px;
     background-color: #FFF;
     position: absolute;
     bottom: 0;
@@ -587,7 +559,7 @@ div.form_activity-cards1 {
     height: 500px;
     margin: 0;
     border-radius: 20px;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .1) ;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .1) ;
     overflow: hidden;
     position: relative;
     transition: .3s;
@@ -604,7 +576,7 @@ div.form_activity-cards2 {
     height: 60%;
     margin: 0 0 auto 0;
     border-radius: 20px;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .1) ;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .1) ;
     overflow: hidden;
     position: relative;
     transition: .3s;
@@ -621,7 +593,7 @@ div.form_activity-cards3 {
     height: 30%;
     margin: auto 0 0 0;
     border-radius: 20px;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .1) ;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .1) ;
     overflow: hidden;
     position: relative;
     transition: .3s;
@@ -638,7 +610,7 @@ div.form_activity-cards4 {
     height: 45%;
     margin: 0 0 auto 0;
     border-radius: 20px;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .1) ;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .1) ;
     overflow: hidden;
     position: relative;
     transition: .3s;
@@ -655,7 +627,7 @@ div.form_activity-cards5 {
     height: 45%;
     margin: auto 0 0 0;
     border-radius: 20px;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, .1) ;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .1) ;
     overflow: hidden;
     position: relative;
     transition: .3s;
@@ -705,12 +677,6 @@ footer ul li {
 footer li a {
     font-size: 16px;
     font-weight: 400;
-    text-decoration: none;
-    color: black;
-}
-
-footer li a:hover {
-    color: rgba(0, 0, 0, .5);
 }
 
 @media screen and (max-width: 1230px){
