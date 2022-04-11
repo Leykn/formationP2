@@ -388,6 +388,10 @@ div.form_lodging {
     transition: .3s;
 }
 
+div.form_lodging a:hover {
+    color: black;
+}
+
 div.form_lodging:hover {
     transform: scale(1.1);
     transition: .3s;
@@ -467,6 +471,10 @@ a.form_popular_link {
     display: flex;
 }
 
+a.form_popular_link:hover {
+    color: black;
+}
+
 div.form_popular:hover {
     transform: scale(1.1);
     transition: .3s;
@@ -519,6 +527,10 @@ section.form_activity {
     margin: 0 3% 20px 3%;
     display: flex;
     flex-wrap: wrap;
+}
+
+section.form_activity a:hover {
+    color: black;
 }
 
 section.form_activity h3 {
