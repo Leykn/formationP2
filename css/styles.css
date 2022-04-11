@@ -467,6 +467,10 @@ div.form_popular {
     transition: .3s;
 }
 
+div.form_popular a:hover {
+    color: #000;
+}
+
 a.form_popular_link {
     display: flex;
 }
